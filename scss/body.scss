@@ -17,13 +17,16 @@
 			display: none;
 		}
 		.navbar_header{
+			background: #2d3038;
+	    position: fixed;
+	    top: 0px;
+	    right: -10px;
+	    width: 30%;
+	    height: 70px;
 			.header_logo{
-				background: #2d3038;
 				position: absolute;
-		    top: 0;
-		    right: -50px;
-		    width: 30%;
-				padding: 20px 20px;
+		    top: 30%;
+		    left: 26%;
 				color: #fff;
 				font-family: 'Monoton', cursive;
 				font-size: 20px;
@@ -32,20 +35,18 @@
 						color: #f0c30f;
 					}
 				span:nth-child(1){
-					margin-left: 90px;
 					padding: 0 5px;
 					color: #f0c30f;
 					border: 2px solid #f0c30f; 
 				}
-				.logo{
-					position: absolute;
-					bottom: 6px;
-    			left: 5%;
-					border-radius: 50%;
-					&:hover{
-						opacity: 0.7;
-					}
-				}	
+			}
+			.logo{
+		    float: left;
+		    margin: 4px 20px;
+				border-radius: 50%;
+				&:hover{
+					opacity: 0.7;
+				}
 			}
 		}
 		.header_menu_nav{
@@ -229,6 +230,7 @@
 		font-style: normal;
 		p{
 			margin-bottom: 10px;
+			text-decoration: none;
 			span{
 				font-size: 15px;
 				font-weight: 700;
@@ -240,7 +242,7 @@
 		.achievement_info{
 			float: left;
 			&:not(:first-child){
-				margin-left: 20px;
+				margin-left: 30px;
 			} 
 			h1{
 				font-family: 'Montserrat', sans-serif;
@@ -292,6 +294,16 @@
 // @media запити
 
 @media screen and (max-width: 1240px){
+	.header_menu{
+		.fixed_top{
+			.navbar_header{
+				.header_logo{
+					left: 32%;
+				}
+			}
+		}
+	}
+
 	.home-banner-one{
 		.banner_content{
 			.banner_info{
@@ -313,6 +325,16 @@
 
 
 @media screen and (max-width: 1100px){
+	.header_menu{
+		.fixed_top{
+			.navbar_header{
+				.header_logo{
+					left: 38%;
+				}
+			}
+		}
+	}
+
 	.home-banner-one{
 		.banner_content{
 			.banner_info{
@@ -330,6 +352,16 @@
 			}
 		}
 	}
+
+	.about{
+		.achievement{
+			.achievement_info{
+				&:not(:first-child){
+					margin-left: 20px;
+				}
+			}
+		}
+	}	
 }
 
 
@@ -351,6 +383,16 @@
 			}
 		}
 	}
+
+	.about{
+		.achievement{
+			.achievement_info{
+				&:not(:first-child){
+					margin-left: 10px;
+				}
+			}
+		}
+	}	
 }
 
 
@@ -412,26 +454,19 @@
 				}
 			}
 		.navbar_header{
+			width: 100%;
+			right: 0;
 			.header_logo{
-			  width: 100%;
-			  right: 0;
-			  	span:nth-child(1){
-					margin-left: 160px;
-				}
-				.logo{
-	    		left: 10%;
-				}	
+			  left: 15%;
 			}
 		}		
 		.header_menu_nav{		
 			.header_menu_ul{
-				top: 1px;
 				left: -100%;
 				width: 100%;
 				padding: 0;
 				text-align: center;
 				transition: all 0.5s cubic-bezier(0.15, 0.76, 0.9, 0.46);
-				overflow: auto;
 				.menu_item{
 					float: none;
 					display: block;
@@ -453,7 +488,7 @@
 				}
 			}
 				.active{
-					left: 0;;
+					left: 0;
 				}
 			}
 		}	
@@ -469,15 +504,34 @@
 			}
 	  }
 	}
-
+	
 	.about{
 		width: 85%;
+		.achievement{
+			.achievement_info{
+				&:not(:first-child){
+					margin-left: 30px;
+				}
+			}
+		}
 	}	
 
 }
 
 
 @media screen and (max-width: 730px){
+	.header_menu{
+		.fixed_top{
+			.header_menu_nav{		
+				.header_menu_ul{
+					.social{
+						display: none;
+					}
+				}
+			}	
+		}
+	}	
+
 	.home-banner-one{
 		.banner_content{
 			.banner_info{
@@ -498,6 +552,45 @@
 			}
 		}
 	}
+	.about{
+		padding-bottom: 40px;
+		.achievement{
+			display: grid;
+    	grid-template-columns: auto auto;
+    	grid-column-gap: 20px;
+			.achievement_info{
+				&:not(:first-child){
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 690px){
+	.header_menu{
+		.fixed_top{
+			.navbar_header{
+				.header_logo{
+					left: 20%;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 500px){
+	.header_menu{
+		.fixed_top{
+			.navbar_header{
+				.header_logo{
+					left: 25%;
+				}
+			}
+		}
+	}
 }
 
 
@@ -506,16 +599,12 @@
 		.fixed_top{
 			.navbar_header{
 				.header_logo{
-					span:nth-child(1){
-						margin-left: 140px;
-					}
-					.logo{
-						left: 16%;
-					}
+					left: 32%;
 				}
 			}
 		}
 	}
+
 	.home-banner-one{
 		.banner_content{
 			.banner_info{

@@ -118,15 +118,6 @@
 .header_menu .header_menu_nav .header_menu_ul .social .list_inline_item a i:hover {
   color: #f0c30f;
 }
-.header_menu .header_menu_nav .header_menu_ul .social span {
-  display: block;
-  padding: 0 10px 15px 25px;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 8px;
-  font-weight: 400;
-  text-align: center;
-}
 
 .home-banner-one {
   position: relative;
@@ -278,7 +269,7 @@
   color: #2d3038;
 }
 .skill .section_content .text_info h4 {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 28px;
@@ -392,6 +383,101 @@
   color: #2d3038;
   font-weight: 400;
   font-size: 14px;
+}
+
+.education {
+  width: 100%;
+  background: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.education .section_content {
+  position: relative;
+  left: 10%;
+  width: 60%;
+}
+.education .section_content .section_title h1 {
+  margin-top: 20px;
+  font-size: 56px;
+  font-family: 'Aclonica', sans-serif;
+  color: #2d3038;
+}
+.education .section_content .text_info h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3038;
+}
+.education .section_content .text_info p {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  color: #2d3038;
+  text-align: justify;
+}
+.education .section_content .education_info img {
+  margin: 15px 0;
+  max-width: 100%;
+  height: auto;
+}
+.education .section_content .education_info h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2d3038;
+  font-weight: 700;
+  font-size: 28px;
+}
+.education .section_content .education_info h5 {
+  line-height: 10px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #2d3038;
+  font-weight: 700;
+  font-size: 18px;
+}
+.education .section_content .education_info p {
+  margin: 20px 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #2d3038;
+  font-size: 22px;
+}
+.education .section_content hr {
+  color: #2d3038;
+}
+
+.portfolio {
+  width: 100%;
+  background: #eaeaea;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.portfolio .section_content {
+  position: relative;
+  left: 10%;
+  width: 60%;
+}
+.portfolio .section_content .section_title h1 {
+  margin-top: 20px;
+  font-size: 56px;
+  font-family: 'Aclonica', sans-serif;
+  color: #2d3038;
+}
+
+.footer {
+  background-color: #261710;
+  width: 100%;
+  height: 90px;
+  position: relative;
+}
+.footer span {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
 }
 
 @media screen and (max-width: 1240px) {
@@ -587,6 +673,32 @@
     line-height: 100px;
     font-size: 30px;
   }
+
+  .education .section_content {
+    width: 85%;
+  }
+  .education .section_content .section_title h1 {
+    font-size: 50px;
+  }
+  .education .section_content .text_info h4 {
+    font-size: 22px;
+  }
+  .education .section_content .education_info h3 {
+    font-size: 25px;
+  }
+  .education .section_content .education_info h5 {
+    font-size: 16px;
+  }
+  .education .section_content .education_info p {
+    font-size: 20px;
+  }
+
+  .portfolio .section_content {
+    width: 85%;
+  }
+  .portfolio .section_content .section_title h1 {
+    font-size: 50px;
+  }
 }
 @media screen and (max-width: 730px) {
   .home-banner-one .banner_content .banner_info h1 {
@@ -628,6 +740,13 @@
     line-height: 85px;
     font-size: 27px;
   }
+
+  .footer {
+    height: 70px;
+  }
+  .footer span {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 690px) {
   .header_menu .navbar_header .header_logo {
@@ -646,6 +765,14 @@
   }
   .skill .section_content .chart .chart_info {
     padding-right: 50px;
+  }
+
+  .education .section_content .section_title h1 {
+    font-size: 46px;
+  }
+
+  .portfolio .section_content .section_title h1 {
+    font-size: 46px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -681,7 +808,7 @@
     left: 6%;
   }
   .about .section_title h1 {
-    font-size: 38px;
+    font-size: 36px;
   }
   .about .section_title h4 {
     font-size: 10px;
@@ -691,7 +818,7 @@
     left: 6%;
   }
   .skill .section_content .section_title h1 {
-    font-size: 38px;
+    font-size: 36px;
   }
   .skill .section_content .chart .chart_info {
     padding-right: 10px;
@@ -701,5 +828,32 @@
     height: 80px;
     line-height: 80px;
     font-size: 26px;
+  }
+
+  .education .section_content {
+    left: 6%;
+  }
+  .education .section_content .section_title h1 {
+    font-size: 36px;
+  }
+  .education .section_content .education_info h3 {
+    font-size: 22px;
+  }
+  .education .section_content .education_info h5 {
+    font-size: 14px;
+  }
+  .education .section_content .education_info p {
+    font-size: 16px;
+  }
+
+  .portfolio .section_content {
+    left: 6%;
+  }
+  .portfolio .section_content .section_title h1 {
+    font-size: 36px;
+  }
+
+  .footer span {
+    font-size: 12px;
   }
 }

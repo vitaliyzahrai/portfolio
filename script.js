@@ -5,6 +5,33 @@ $(document).ready(function(){
   });
 });
 
+
+$('.counter').each(function() {
+	$(this).prop('Counter',0).animate({
+		Counter: $(this).text()
+	}, {
+		dutation: 7000,
+		easing: 'swing',
+		step: function(now) {
+			$(this).text(Math.ceil(now));
+		}
+	});
+});
+
+
+$('.percent').each(function() {
+	$(this).prop('Counter',0).animate({
+		Counter: $(this).text()
+	}, {
+		dutation: 8000,
+		easing: 'linear',
+		step: function(now) {
+			$(this).text(Math.ceil(now) + '%');
+		}
+	});
+});
+
+
 $('.skills_per').each(function(){
 	var $this = $(this);
 	var per = $this.attr('per');

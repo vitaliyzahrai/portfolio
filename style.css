@@ -252,7 +252,7 @@
   color: #873e95;
 }
 .about .achievement .achievement_info .counter2 {
-  color: #ed1c24;
+  color: #007bff;
 }
 .about .achievement .achievement_info .counter3 {
   color: #b90162;
@@ -262,20 +262,97 @@
   width: 100%;
   background: #eaeaea;
   padding-top: 50px;
+  padding-bottom: 30px;
 }
 .skill .section_content {
   position: relative;
   left: 10%;
   width: 60%;
 }
-.skill .section_content .section_title {
-  padding-bottom: 30px;
-}
 .skill .section_content .section_title h1 {
   margin-top: 20px;
   font-size: 56px;
   font-family: 'Aclonica', sans-serif;
   color: #2d3038;
+}
+.skill .section_content .text_info h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3038;
+}
+.skill .section_content .text_info p {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  color: #2d3038;
+}
+.skill .section_content .progress_content {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 20px;
+}
+.skill .section_content .progress_content .skills {
+  width: 100%;
+}
+.skill .section_content .progress_content .skills .skills_name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #2d3038;
+  margin: 20px 0 5px 0;
+}
+.skill .section_content .progress_content .skills .skills_bar {
+  height: 10px;
+  background: #cacaca;
+  border-radius: 8px;
+}
+.skill .section_content .progress_content .skills .skills_bar .skills_per {
+  font-family: 'Montserrat', sans-serif;
+  height: 10px;
+  background-color: #f36f03;
+  border-radius: 8px;
+  width: 0;
+  transition: 1s linear;
+  position: relative;
+}
+.skill .section_content .progress_content .skills .skills_bar .skills_per:before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background-color: #2d3038;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+.skill .section_content .progress_content .skills .skills_bar .skills_per:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #2d3038;
+  top: -18px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+.skill .section_content .progress_content .skills .skills_bar .skills_per2 {
+  background-color: #fea700;
+}
+.skill .section_content .progress_content .skills .skills_bar .skills_per3 {
+  background-color: #6610f2;
+}
+.skill .section_content .progress_content .skills .skills_bar .skills_per4 {
+  background-color: #28a745;
+}
+.skill .section_content .progress_content .skills .skills_bar .skills_per5 {
+  background-color: #007bff;
+}
+.skill .section_content .progress_content .skills .skills_bar .skills_per6 {
+  background-color: #ed1c24;
 }
 
 @media screen and (max-width: 1240px) {
@@ -358,7 +435,6 @@
     width: 100%;
     height: 2px;
     left: 0;
-    -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
   }
   .header_menu .fixed_top .header_burger span {
@@ -368,7 +444,6 @@
     height: 2px;
     left: 5px;
     top: 9px;
-    -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
   }
   .header_menu .fixed_top .header_burger:before {
@@ -378,18 +453,15 @@
     bottom: 0;
   }
   .header_menu .fixed_top .active:before {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
     top: 9px;
   }
   .header_menu .fixed_top .active:after {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
     bottom: 9px;
   }
   .header_menu .fixed_top .active span {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   .header_menu .fixed_top .navbar_header {
     width: 100%;
@@ -403,7 +475,6 @@
     width: 100%;
     padding: 0;
     text-align: center;
-    -webkit-transition: all 0.5s cubic-bezier(0.15, 0.76, 0.9, 0.46);
     transition: all 0.5s cubic-bezier(0.15, 0.76, 0.9, 0.46);
   }
   .header_menu .fixed_top .header_menu_nav .header_menu_ul .menu_item {
@@ -439,8 +510,24 @@
   .about {
     width: 85%;
   }
+  .about .section_title h1 {
+    font-size: 50px;
+  }
+  .about .section_title h4 {
+    font-size: 12px;
+  }
   .about .achievement .achievement_info:not(:first-child) {
     margin-left: 30px;
+  }
+
+  .skill .section_content {
+    width: 85%;
+  }
+  .skill .section_content .section_title h1 {
+    font-size: 50px;
+  }
+  .skill .section_content .text_info h4 {
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 730px) {
@@ -474,10 +561,22 @@
   .about .achievement .achievement_info:not(:first-child) {
     margin-left: 0;
   }
+
+  .skill .section_content .progress_content {
+    display: block;
+  }
 }
 @media screen and (max-width: 690px) {
   .header_menu .fixed_top .navbar_header .header_logo {
     left: 20%;
+  }
+
+  .about .section_title h1 {
+    font-size: 46px;
+  }
+
+  .skill .section_content .section_title h1 {
+    font-size: 46px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -507,5 +606,38 @@
 
   .about {
     left: 6%;
+  }
+  .about .section_title h1 {
+    font-size: 38px;
+  }
+  .about .section_title h4 {
+    font-size: 10px;
+  }
+
+  .skill .section_content .section_title h1 {
+    font-size: 38px;
+  }
+}
+ome-banner-one .banner_content .banner_info h2 {
+    font-size: 42px;
+    line-height: 40px;
+  }
+  .home-banner-one .banner_content .banner_info h3 {
+    font-size: 11px;
+    letter-spacing: 12px;
+  }
+
+  .about {
+    left: 6%;
+  }
+  .about .section_title h1 {
+    font-size: 38px;
+  }
+  .about .section_title h4 {
+    font-size: 10px;
+  }
+
+  .skill .section_content .section_title h1 {
+    font-size: 38px;
   }
 }

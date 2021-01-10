@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="library/fontawesome/css/all.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap&family=Monoton&family=Montserrat:wght@400;700&family=Aclonica&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	
@@ -25,9 +26,9 @@
 		</div>	
 		<nav class="header_menu_nav">
 			<ul class="header_menu_ul">
-				<li class="menu_item"><a href="#"><span><i class="fas fa-sliders-h"></i> HOME</span></a></li>
-				<li class="menu_item"><a href="#"><span><i class="fas fa-user-secret"></i> ABOUT ME</span></a></li>
-				<li class="menu_item"><a href="#"><span><i class="fas fa-sliders-h"></i> SKILLS</span></a></li>
+				<li class="menu_item"><a href="#home_baner"><span><i class="fas fa-sliders-h"></i> HOME</span></a></li>
+				<li class="menu_item"><a href="#about_section"><span><i class="fas fa-user-secret"></i> ABOUT ME</span></a></li>
+				<li class="menu_item"><a href="#skill_section"><span><i class="fas fa-sliders-h"></i> SKILLS</span></a></li>
 				<li class="menu_item"><a href="#"><span><i class="fab fa-leanpub"></i> EDUCATION</span></a></li>
 				<li class="menu_item"><a href="#"><span><i class="far fa-image"></i> PORTFOLIO</a></span></li>
 				<li class="menu_item"><a href="#"><span><i class="fas fa-phone-volume"></i> CONTACT</span></a></li>
@@ -45,7 +46,7 @@
 	</div>
 </header>
 
-<section class="home-banner-one">
+<section id="home_baner" class="home-banner-one">
 	<div class="banner_content">
 		<div class="banner_info">
 			<h1>Hello, I am</h1>
@@ -55,7 +56,7 @@
 	</div>
 </section>
 
-<section class="about">
+<section id="about_section" class="about">
 	<div class="section_title">
 		<h1>Vitaliy Zahrai</h1>
 		<h4>Front-end Developer</h4>
@@ -76,26 +77,26 @@
 	</address>
 	<ul class="achievement">
 		<li class="achievement_info">
-			<span class="counter">23</span>
+			<span class="counter">4</span>
 			<h1>Projects completed</h1>
 		</li>
 		<li class="achievement_info">
-			<span class="counter counter1">16</span>
+			<span class="counter counter1">0</span>
 			<h1>Winning Awards</h1>
 		</li>
 		<li class="achievement_info">
-			<span class="counter counter2">118</span>
+			<span class="counter counter2">22</span>
 			<h1>Happy Clients</h1>
 		</li>
 		<li class="achievement_info">
-			<span class="counter counter3">11</span>
+			<span class="counter counter3">1</span>
 			<h1>Running Projects</h1>
 		</li>
 	</ul>
 </section>
 
 
-<section class="skill">
+<section id="skill_section" class="skill">
 	<div class="section_content">
 		<div class="section_title">
 			<h1>My Skills</h1>
@@ -105,7 +106,42 @@
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad laborum illum, soluta fuga possimus numquam reprehenderit ducimus laboriosam laudantium enim delectus ex facilis aspernatur distinctio nam fugit velit impedit.</p>
 		</div>
 		<div class="progress_content">
-			
+			<div class="skills">
+				<div class="skills_name">HTML 5</div>
+				<div class="skills_bar">
+					<div class="skills_per" per="85"></div>
+				</div>
+			</div>
+			<div class="skills">
+				<div class="skills_name">CSS/SASS</div>
+				<div class="skills_bar">
+					<div class="skills_per skills_per2" per="75"></div>
+				</div>
+			</div>
+			<div class="skills">
+				<div class="skills_name">JS</div>
+				<div class="skills_bar">
+					<div class="skills_per skills_per3" per="15"></div>
+				</div>
+			</div>
+			<div class="skills">
+				<div class="skills_name">Bootstrap</div>
+				<div class="skills_bar">
+					<div class="skills_per skills_per4" per="60"></div>
+				</div>
+			</div>
+			<div class="skills">
+				<div class="skills_name">Git</div>
+				<div class="skills_bar">
+					<div class="skills_per skills_per5" per="30"></div>
+				</div>
+			</div>
+			<div class="skills">
+				<div class="skills_name">Photoshop</div>
+				<div class="skills_bar">
+					<div class="skills_per skills_per6" per="70"></div>
+				</div>
+			</div>
 		</div>
 		<div class="language_skill">
 			<div class="text_info">
@@ -116,7 +152,8 @@
 	</div>
 </section>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
 <script src="script.js"></script>
 
 

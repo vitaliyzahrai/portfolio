@@ -121,15 +121,15 @@
 						}	
 					}
 				}
-				span{
-					display: block;
-					padding: 0 10px 15px 25px;
-					color: #fff;
-					font-family: 'Montserrat', sans-serif;
-					font-size: 8px;
-					font-weight: 400;
-					text-align: center;	
-				}
+				// span{
+				// 	display: block;
+				// 	padding: 0 10px 15px 25px;
+				// 	color: #fff;
+				// 	font-family: 'Montserrat', sans-serif;
+				// 	font-size: 8px;
+				// 	font-weight: 400;
+				// 	text-align: center;	
+				// }
 			}		
 		}
 	}
@@ -288,7 +288,7 @@
 		}
 		.text_info{
 			h4{
-				margin-top: 10px;
+				margin-top: 20px;
 				margin-bottom: 10px;
 				font-family: 'Montserrat', sans-serif;
 				font-size: 28px;
@@ -406,6 +406,108 @@
 	}
 }
 
+.education{
+	width: 100%;
+	background: #fff;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	.section_content{
+		position: relative;
+		left: 10%;
+		width: 60%;
+		.section_title{
+			h1{
+				margin-top: 20px;
+				font-size: 56px;
+		    font-family: 'Aclonica', sans-serif;
+		    color: #2d3038;
+			}
+		}
+		.text_info{
+			h4{
+				margin-top: 20px;
+				margin-bottom: 10px;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 28px;
+    		font-weight: 700;
+    		color: #2d3038;
+			}
+			p{
+				font-family: 'Montserrat', sans-serif;
+				margin-bottom: 20px;
+				color: #2d3038;
+				text-align: justify;
+			}
+		}
+		.education_info{
+			img{
+				margin: 15px 0;
+				max-width: 100%;
+   			height: auto;
+			}
+			h3{
+				font-family: 'Montserrat', sans-serif;
+				color: #2d3038;
+				font-weight: 700;
+				font-size: 28px;
+			}
+			h5{
+				line-height: 10px;
+   			margin: 10px 0;
+				font-family: 'Montserrat', sans-serif;
+				color: #2d3038;
+				font-weight: 700;
+				font-size: 18px;
+			}
+			p{
+				margin: 20px 0;
+				font-family: 'Montserrat', sans-serif;
+				color: #2d3038;
+				font-size: 22px;
+			}
+		}
+		hr{
+			color: #2d3038;
+		}
+	}
+}
+
+.portfolio{
+	width: 100%;
+	background: #eaeaea;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	.section_content{
+		position: relative;
+		left: 10%;
+		width: 60%;
+		.section_title{
+			h1{
+				margin-top: 20px;
+				font-size: 56px;
+		    font-family: 'Aclonica', sans-serif;
+		    color: #2d3038;
+			}
+		}
+	}
+}
+
+.footer{
+	background-color: #261710;
+	width: 100%;
+	height: 90px;
+	position: relative;
+	span{
+		position: absolute;
+    top: 40%;
+    left: 10%;
+		color: #fff;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		text-align: left;	
+	}	
+}
 
 
 // @media запити
@@ -670,7 +772,45 @@
 				}
 			}
 		}
-	}	
+	}
+
+	.education{
+		.section_content{
+			width: 85%;
+			.section_title{
+				h1{
+					font-size: 50px;
+				}
+			}
+			.text_info{
+				h4{
+					font-size: 22px;
+				}
+			}
+			.education_info{
+				h3{
+					font-size: 25px;
+				}
+				h5{
+					font-size: 16px;
+				}
+				p{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	.portfolio{
+		.section_content{
+			width: 85%;
+			.section_title{
+				h1{
+					font-size: 50px;
+				}
+			}
+		}	
+	}		
 
 }
 
@@ -731,6 +871,13 @@
 		}
 	}
 
+	.footer{
+		height: 70px;
+		span{
+			font-size: 14px;
+		}	
+	}
+
 }
 
 
@@ -767,6 +914,26 @@
 		}
 	}
 
+	.education{
+		.section_content{
+			.section_title{
+				h1{
+					font-size: 46px;
+				}
+			}
+		}	
+	}
+
+	.portfolio{
+		.section_content{
+			.section_title{
+				h1{
+					font-size: 46px;
+				}
+			}
+		}	
+	}
+		
 }
 
 
@@ -824,7 +991,7 @@
 		left: 6%;
 		.section_title{
 			h1{
-				font-size: 38px;
+				font-size: 36px;
 			}
 			h4{
 				font-size: 10px;
@@ -837,7 +1004,7 @@
 			left: 6%;
 			.section_title{
 				h1{
-					font-size: 38px;
+					font-size: 36px;
 				}
 			}
 			.chart{
@@ -852,6 +1019,45 @@
 				}
 			}
 		}
+	}
+
+	.education{
+		.section_content{
+			left: 6%;
+			.section_title{
+				h1{
+					font-size: 36px;
+				}
+			}
+			.education_info{
+				h3{
+					font-size: 22px;
+				}
+				h5{
+					font-size: 14px;
+				}
+				p{
+					font-size: 16px;
+				}
+			}
+		}	
+	}
+
+	.portfolio{
+		.section_content{
+			left: 6%;
+			.section_title{
+				h1{
+					font-size: 36px;
+				}
+			}
+		}	
+	}
+
+	.footer{
+		span{
+			font-size: 12px;
+		}	
 	}
 
 }

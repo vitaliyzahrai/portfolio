@@ -1,7 +1,11 @@
 $(document).ready(function(){
   $('.header_burger').click(function(event) {
     $('.header_burger,.header_menu_ul').toggleClass('active');
-    $('body').toggleClass('lock');
+    $('html').toggleClass('lock');
+  });
+   $('.menu_item').click(function(event) {
+    $('.header_burger,.header_menu_ul,.menu_item').removeClass('active');
+    $('html').removeClass('lock');
   });
 });
 

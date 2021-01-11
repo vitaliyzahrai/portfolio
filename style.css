@@ -97,8 +97,8 @@
   left: 30px;
 }
 .header_menu .header_menu_nav .header_menu_ul .social {
+  list-style: none;
   background-color: #261710;
-  display: inline-block;
   width: 100%;
   height: 90px;
   margin-left: 10px;
@@ -164,47 +164,32 @@
 }
 
 .about {
-  position: relative;
-  left: 10%;
-  width: 60%;
+  width: 100%;
   padding-top: 50px;
   padding-bottom: 150px;
 }
-.about .section_title h1 {
-  margin-top: 20px;
-  font-size: 56px;
-  font-family: 'Aclonica', sans-serif;
-  color: #2d3038;
-}
-.about .section_title h4 {
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-  color: #2d3038;
-  font-weight: 700;
-  letter-spacing: 8px;
-}
-.about .about_info {
+.about .section_content .about_info {
   padding-bottom: 15px;
 }
-.about .about_info p {
+.about .section_content .about_info p {
   font-family: 'Montserrat', sans-serif;
   color: #2d3038;
   font-weight: 400;
   text-align: justify;
 }
-.about .about_info .signature {
+.about .section_content .about_info .signature {
   padding-top: 20px;
   color: #2d3038;
   font-family: 'Monoton', cursive;
   font-size: 35px;
   text-decoration: none;
 }
-.about .about_info .signature span:nth-child(1) {
+.about .section_content .about_info .signature span:nth-child(1) {
   padding: 0 5px;
   color: #f0c30f;
   border: 2px solid #f0c30f;
 }
-.about address {
+.about .section_content address {
   line-height: 35px;
   font-family: 'Montserrat', sans-serif;
   color: #2d3038;
@@ -212,42 +197,42 @@
   font-size: 18px;
   font-style: normal;
 }
-.about address p {
+.about .section_content address p {
   margin-bottom: 10px;
   text-decoration: none;
 }
-.about address p span {
+.about .section_content address p span {
   font-size: 15px;
   font-weight: 700;
 }
-.about .achievement {
+.about .section_content .achievement {
   list-style: none;
 }
-.about .achievement .achievement_info {
+.about .section_content .achievement .achievement_info {
   float: left;
 }
-.about .achievement .achievement_info:not(:first-child) {
+.about .section_content .achievement .achievement_info:not(:first-child) {
   margin-left: 30px;
 }
-.about .achievement .achievement_info h1 {
+.about .section_content .achievement .achievement_info h1 {
   font-family: 'Montserrat', sans-serif;
   color: #2d3038;
   font-weight: 400;
   font-size: 14px;
 }
-.about .achievement .achievement_info .counter {
+.about .section_content .achievement .achievement_info .counter {
   font-family: 'Montserrat', sans-serif;
   font-size: 60px;
   font-weight: 700;
   color: #f26522;
 }
-.about .achievement .achievement_info .counter1 {
+.about .section_content .achievement .achievement_info .counter1 {
   color: #873e95;
 }
-.about .achievement .achievement_info .counter2 {
+.about .section_content .achievement .achievement_info .counter2 {
   color: #007bff;
 }
-.about .achievement .achievement_info .counter3 {
+.about .section_content .achievement .achievement_info .counter3 {
   color: #b90162;
 }
 
@@ -256,31 +241,6 @@
   background: #eaeaea;
   padding-top: 50px;
   padding-bottom: 220px;
-}
-.skill .section_content {
-  position: relative;
-  left: 10%;
-  width: 60%;
-}
-.skill .section_content .section_title h1 {
-  margin-top: 20px;
-  font-size: 56px;
-  font-family: 'Aclonica', sans-serif;
-  color: #2d3038;
-}
-.skill .section_content .text_info h4 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: #2d3038;
-}
-.skill .section_content .text_info p {
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 20px;
-  color: #2d3038;
-  text-align: justify;
 }
 .skill .section_content .progress_content {
   display: grid;
@@ -391,31 +351,6 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.education .section_content {
-  position: relative;
-  left: 10%;
-  width: 60%;
-}
-.education .section_content .section_title h1 {
-  margin-top: 20px;
-  font-size: 56px;
-  font-family: 'Aclonica', sans-serif;
-  color: #2d3038;
-}
-.education .section_content .text_info h4 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: #2d3038;
-}
-.education .section_content .text_info p {
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 20px;
-  color: #2d3038;
-  text-align: justify;
-}
 .education .section_content .education_info img {
   margin: 15px 0;
   max-width: 100%;
@@ -451,16 +386,18 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.portfolio .section_content {
-  position: relative;
-  left: 10%;
-  width: 60%;
+.portfolio .section_content .portfolio_content {
+  grid-template-columns: auto auto;
+  grid-column-gap: 20px;
+  display: grid;
 }
-.portfolio .section_content .section_title h1 {
-  margin-top: 20px;
-  font-size: 56px;
-  font-family: 'Aclonica', sans-serif;
-  color: #2d3038;
+.portfolio .section_content .portfolio_content .portfolio_item {
+  position: relative;
+}
+.portfolio .section_content .portfolio_content .portfolio_item img {
+  width: 100%;
+  height: auto;
+  margin: 15px auto;
 }
 
 .footer {
@@ -478,6 +415,39 @@
   font-size: 16px;
   font-weight: 400;
   text-align: left;
+}
+
+.about .section_content, .skill .section_content, .education .section_content, .portfolio .section_content {
+  position: relative;
+  left: 10%;
+  width: 60%;
+}
+.about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1 {
+  margin-top: 20px;
+  font-size: 56px;
+  font-family: 'Aclonica', sans-serif;
+  color: #2d3038;
+}
+.about .section_content .section_title h4, .skill .section_content .section_title h4, .education .section_content .section_title h4, .portfolio .section_content .section_title h4 {
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #2d3038;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+.about .section_content .text_info h4, .skill .section_content .text_info h4, .education .section_content .text_info h4, .portfolio .section_content .text_info h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3038;
+}
+.about .section_content .text_info p, .skill .section_content .text_info p, .education .section_content .text_info p, .portfolio .section_content .text_info p {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  color: #2d3038;
+  text-align: justify;
 }
 
 @media screen and (max-width: 1240px) {
@@ -514,7 +484,7 @@
     letter-spacing: 20px;
   }
 
-  .about .achievement .achievement_info:not(:first-child) {
+  .about .section_content .achievement .achievement_info:not(:first-child) {
     margin-left: 20px;
   }
 }
@@ -533,7 +503,7 @@
     letter-spacing: 18px;
   }
 
-  .about .achievement .achievement_info:not(:first-child) {
+  .about .section_content .achievement .achievement_info:not(:first-child) {
     margin-left: 10px;
   }
 
@@ -642,28 +612,10 @@
     margin-top: -200px;
   }
 
-  .about {
-    width: 85%;
-  }
-  .about .section_title h1 {
-    font-size: 50px;
-  }
-  .about .section_title h4 {
-    font-size: 12px;
-  }
-  .about .achievement .achievement_info:not(:first-child) {
+  .about .section_content .achievement .achievement_info:not(:first-child) {
     margin-left: 30px;
   }
 
-  .skill .section_content {
-    width: 85%;
-  }
-  .skill .section_content .section_title h1 {
-    font-size: 50px;
-  }
-  .skill .section_content .text_info h4 {
-    font-size: 22px;
-  }
   .skill .section_content .chart .chart_info {
     padding-right: 80px;
   }
@@ -674,15 +626,6 @@
     font-size: 30px;
   }
 
-  .education .section_content {
-    width: 85%;
-  }
-  .education .section_content .section_title h1 {
-    font-size: 50px;
-  }
-  .education .section_content .text_info h4 {
-    font-size: 22px;
-  }
   .education .section_content .education_info h3 {
     font-size: 25px;
   }
@@ -693,11 +636,17 @@
     font-size: 20px;
   }
 
-  .portfolio .section_content {
+  .about .section_content, .skill .section_content, .education .section_content, .portfolio .section_content {
     width: 85%;
   }
-  .portfolio .section_content .section_title h1 {
+  .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1 {
     font-size: 50px;
+  }
+  .about .section_content .section_title h4, .skill .section_content .section_title h4, .education .section_content .section_title h4, .portfolio .section_content .section_title h4 {
+    font-size: 12px;
+  }
+  .about .section_content .text_info h4, .skill .section_content .text_info h4, .education .section_content .text_info h4, .portfolio .section_content .text_info h4 {
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 730px) {
@@ -719,12 +668,12 @@
   .about {
     padding-bottom: 40px;
   }
-  .about .achievement {
+  .about .section_content .achievement {
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 20px;
   }
-  .about .achievement .achievement_info:not(:first-child) {
+  .about .section_content .achievement .achievement_info:not(:first-child) {
     margin-left: 0;
   }
 
@@ -753,25 +702,14 @@
     left: 20%;
   }
 
-  .about .section_title h1 {
-    font-size: 46px;
-  }
-
   .skill {
     padding-bottom: 170px;
-  }
-  .skill .section_content .section_title h1 {
-    font-size: 46px;
   }
   .skill .section_content .chart .chart_info {
     padding-right: 50px;
   }
 
-  .education .section_content .section_title h1 {
-    font-size: 46px;
-  }
-
-  .portfolio .section_content .section_title h1 {
+  .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1 {
     font-size: 46px;
   }
 }
@@ -783,6 +721,12 @@
   .skill .section_content .chart .chart_info {
     padding-right: 20px;
   }
+
+  .portfolio .section_content .portfolio_content {
+    grid-template-columns: auto;
+    grid-column-gap: 20px;
+    display: grid;
+  }
 }
 @media screen and (max-width: 425px) {
   .header_menu .navbar_header .header_logo {
@@ -790,7 +734,7 @@
   }
 
   .home-banner-one .banner_content .banner_info {
-    left: 6%;
+    left: 5%;
   }
   .home-banner-one .banner_content .banner_info h1 {
     font-size: 25px;
@@ -804,22 +748,6 @@
     letter-spacing: 12px;
   }
 
-  .about {
-    left: 6%;
-  }
-  .about .section_title h1 {
-    font-size: 36px;
-  }
-  .about .section_title h4 {
-    font-size: 10px;
-  }
-
-  .skill .section_content {
-    left: 6%;
-  }
-  .skill .section_content .section_title h1 {
-    font-size: 36px;
-  }
   .skill .section_content .chart .chart_info {
     padding-right: 10px;
   }
@@ -830,12 +758,6 @@
     font-size: 26px;
   }
 
-  .education .section_content {
-    left: 6%;
-  }
-  .education .section_content .section_title h1 {
-    font-size: 36px;
-  }
   .education .section_content .education_info h3 {
     font-size: 22px;
   }
@@ -846,11 +768,15 @@
     font-size: 16px;
   }
 
-  .portfolio .section_content {
-    left: 6%;
+  .about .section_content, .skill .section_content, .education .section_content, .portfolio .section_content {
+    left: 5%;
+    width: 90%;
   }
-  .portfolio .section_content .section_title h1 {
+  .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1 {
     font-size: 36px;
+  }
+  .about .section_content .section_title h4, .skill .section_content .section_title h4, .education .section_content .section_title h4, .portfolio .section_content .section_title h4 {
+    font-size: 10px;
   }
 
   .footer span {

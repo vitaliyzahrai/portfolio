@@ -49,15 +49,17 @@
 		}
 	}
 	.header_menu_nav{
+		position: fixed;
+		top: 70px;
+		right: 0;
+		bottom: 0;
+		width: 30%;
+		// overflow-y: auto;
 		.header_menu_ul{
-			position: absolute;
-		  right: 0;
-		  width: 30%;
-		  margin-top: 70px;
 			.menu_item{
 				display: block;
 				padding: 25px 15px;
-				margin-left: 10px;
+				margin-left: 10px;	
 					&:hover{
 						margin-left: 0;
 					}
@@ -98,6 +100,9 @@
 					}
 				}
 			}
+			.active{
+				margin-left: 0;
+			}
 			.social{
 				list-style: none;
 				background-color: #261710;
@@ -126,7 +131,7 @@
 
 // home_baner section
 
-.home-banner-one{
+.home_banner_one{
 	position: relative;
   height: 600px;
 	background: #eaeaea;
@@ -424,6 +429,66 @@
 	}
 }
 
+// contact_me_section
+
+.contact_me{
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	.section_content{
+		.adress{
+			ul{
+				list-style: none;
+				li{
+					padding: 20px;
+					border-bottom: 1px solid #f1f1f1;
+					.icon{
+						float: left;
+				    font-size: 36px;
+				    margin: 10px 30px 0 0;
+				    color: #f4bf00;
+					}
+					.icon2{
+						color: #3c70b4;
+					}
+					.icon3{
+						color: #b90162;
+					}
+					.icon4{
+						color: #05ac80;
+					}
+					h3{
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-family: 'Montserrat', sans-serif;
+						color: #2d3038;
+						font-weight: 700;
+						font-size: 28px;
+						line-height: 20px;
+					}
+					p{
+						margin-bottom: 5px;
+						font-family: 'Montserrat', sans-serif;
+						color: #2d3038;
+						font-size: 16px;
+					}
+					.social{
+						li{
+							padding: 5px;
+							display: inline-block;
+							margin-right: 10px;
+							font-size: 18px;
+							a{
+								color: #2d3038;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 // footer section
 
 .footer{
@@ -444,10 +509,10 @@
 }
 
 
-.about,.skill,.education,.portfolio{
+.about,.skill,.education,.portfolio,.contact_me{
 	.section_content{
 		position: relative;
-		left: 10%;
+		left: 5%;
 		width: 60%;
 		.section_title{
 			h1{
@@ -500,7 +565,7 @@
 		}	
 	}
 
-	.home-banner-one{
+	.home_banner_one{
 		.banner_content{
 			.banner_info{
 				h1{
@@ -529,7 +594,7 @@
 		}
 	}
 
-	.home-banner-one{
+	.home_banner_one{
 		.banner_content{
 			.banner_info{
 				h1{
@@ -562,7 +627,7 @@
 
 
 @media screen and (max-width: 990px){
-	.home-banner-one{
+	.home_banner_one{
 		.banner_content{
 			.banner_info{
 				top: 60%;
@@ -667,13 +732,16 @@
 		  left: 15%;
 		}
 	}		
-	.header_menu_nav{		
+	.header_menu_nav{
+		width: 100%;
+		transform: translateX(100%);
+		transition: transform 0.5s easy;
+		overflow-y: auto;
+			&.active{
+				transform: translateX(0%);
+			}
 		.header_menu_ul{
-			left: -100%;
-			width: 100%;
-			padding: 0;
 			text-align: center;
-			transition: all 0.5s cubic-bezier(0.15, 0.76, 0.9, 0.46);
 			.menu_item{
 				float: none;
 				display: block;
@@ -694,13 +762,10 @@
 				}
 			}
 		}
-			.active{
-				left: 0;
-			}
 		}
 	}
 
-	.home-banner-one{
+	.home_banner_one{
 		.banner_content{
 			width: 100%;
 			.banner_info{
@@ -760,9 +825,22 @@
 		}	
 	}
 
-	.about,.skill,.education,.portfolio{
+
+	.contact_me{
 		.section_content{
-			width: 85%;
+			.adress{
+				ul{
+					li{
+						padding: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	.about,.skill,.education,.portfolio,.contact_me{
+		.section_content{
+			width: 90%;
 			.section_title{
 				h1{
 					font-size: 50px;
@@ -784,7 +862,7 @@
 
 @media screen and (max-width: 730px){
 
-	.home-banner-one{
+	.home_banner_one{
 		.banner_content{
 			.banner_info{
 				h1{
@@ -885,6 +963,23 @@
 			}
 		}	
 	}
+
+	.contact_me{
+		.section_content{
+			.adress{
+				ul{
+					li{
+						h3{
+							font-size: 22px;
+						}
+						p{
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
 		
 }
 
@@ -918,6 +1013,27 @@
 		}
 	}
 
+	.contact_me{
+		.section_content{
+			.adress{
+				ul{
+					li{
+						padding: 10px;
+						h3{
+							font-size: 18px;
+							line-height: 10px;
+						}
+						.social{
+							li{
+								font-size: 12px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 }
 
 
@@ -930,7 +1046,7 @@
 		}
 	}
 
-	.home-banner-one{
+	.home_banner_one{
 		.banner_content{
 			.banner_info{
 				left: 5%;
@@ -953,7 +1069,7 @@
 		.section_content{
 			.chart{
 				.chart_info{
-					padding-right: 10px;
+					padding-right: 15px;
 					.percent{
 						width: 80px;
 						height: 80px;
@@ -987,10 +1103,8 @@
 		}	
 	}
 
-	.about,.skill,.education,.portfolio{
+	.about,.skill,.education,.portfolio,.contact_me{
 		.section_content{
-			left: 5%;
-			width: 90%;
 			.section_title{
 				h1{
 					font-size: 36px;

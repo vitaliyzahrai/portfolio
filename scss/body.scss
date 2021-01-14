@@ -62,6 +62,7 @@
 				margin-left: 10px;	
 					&:hover{
 						margin-left: 0;
+						transition: all 0.5s;
 					}
 					&:nth-child(1){
 						background-color: #f36f03; 
@@ -133,14 +134,14 @@
 
 .home_banner_one{
 	position: relative;
-  height: 600px;
+  height: 700px;
 	background: #eaeaea;
 	.banner_content{
 		background: url('image/bg_image.jpg');
 		width: 70%;
-		height: 600px;
+		height: 700px;
 		background-size: cover;
-		background-position: center center;
+		background-position: center;
 		.banner_info{
 			position: absolute;
 	    top: 50%;
@@ -160,7 +161,7 @@
 	    	color: #2d3038;
 	    	line-height: 90px;
 	    	span{
-	    		margin: 10px;
+	    		margin: 15px;
 	    	}
 	    }
 	    h3{
@@ -179,7 +180,7 @@
 
 .about{
 	width: 100%;
-	padding-top: 50px;
+	padding-top: 70px;
 	padding-bottom: 150px;
 	.section_content{
 		.about_info{
@@ -257,8 +258,8 @@
 .skill{
 	width: 100%;
 	background: #eaeaea;
-	padding-top: 50px;
-	padding-bottom: 220px;
+	padding-top: 70px;
+	padding-bottom: 70px;
 	.section_content{
 		.progress_content{
 			display: grid;
@@ -327,13 +328,14 @@
 			}
 		}
 		.chart{
+			display: grid;
+   		grid-template-columns: auto auto auto;
+    	grid-column-gap: 20px;
 			.chart_info{
 				list-style: none;
-				float: left;
-				padding-right: 80px;
 				padding-top: 10px;
+				text-align: center;
 				.percent{
-					text-align: center;
 					display: inline-block;
 					width: 110px;
 					height: 110px;
@@ -369,8 +371,8 @@
 .education{
 	width: 100%;
 	background: #fff;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 70px;
+	padding-bottom: 70px;
 	.section_content{
 		.education_info{
 			img{
@@ -410,8 +412,8 @@
 .portfolio{
 	width: 100%;
 	background: #eaeaea;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 70px;
+	padding-bottom: 70px;
 	.section_content{
 		.portfolio_content{
 			grid-template-columns: auto auto;
@@ -419,10 +421,46 @@
 	    display: grid;
 			.portfolio_item{
 				position: relative;
+				margin: 15px auto;
+				&:hover .portfolio_overlay {
+	    		opacity: 1;
+	    		transition: all 0.5s linear;
+				}
 				img{
 					width: 100%;
 			    height: auto;
-			    margin: 15px auto;
+				}
+				.portfolio_overlay{
+				  position: absolute;
+				  top: 0;
+				  bottom: 0;
+				  left: 0;
+				  right: 0;
+				  height: 100%;
+				  width: 100%;
+				  opacity: 0;
+				  transition: .3s ease;
+			    background-color: #fea700;
+				  .portfolio_info{
+					  position: absolute;
+					  top: 50%;
+					  left: 50%;
+					  width: 80%;
+					  transform: translate(-50%, -50%);
+					  text-align: center;
+				  	a{
+				  		font-size: 30px;
+				  		color: #2d3038;
+				  	}
+				  	h3{
+				  		text-transform: uppercase;
+				  		font-family: 'Montserrat', sans-serif;
+				  		font-size: 22px;
+				  		color: #2d3038;
+					    margin-top: 5px;
+					    margin-bottom: 0;
+				  	}
+				  }
 				}
 			}
 		}
@@ -433,8 +471,8 @@
 
 .contact_me{
 	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 70px;
+	padding-bottom: 70px;
 	.section_content{
 		.adress{
 			ul{
@@ -467,6 +505,7 @@
 						line-height: 20px;
 					}
 					p{
+						height: 30px;
 						margin-bottom: 5px;
 						font-family: 'Montserrat', sans-serif;
 						color: #2d3038;
@@ -478,6 +517,7 @@
 							display: inline-block;
 							margin-right: 10px;
 							font-size: 18px;
+							border-bottom: none;
 							a{
 								color: #000;
 							}
@@ -548,6 +588,16 @@
 	}
 }
 
+.about,.contact_me{
+	.section_content{
+		address,.adress{
+			.mobile{
+				text-decoration: none;
+				color: #2d3038;
+			}
+		}
+	}
+}
 
 
 
@@ -597,6 +647,7 @@
 	.home_banner_one{
 		.banner_content{
 			.banner_info{
+				top: 53%;
 				h1{
 					font-size: 36px;
 				}
@@ -657,15 +708,6 @@
 		}
 	}
 
-	.skill{
-		.section_content{
-			.chart{
-				.chart_info{
-					padding-right: 60px;
-				}
-			}
-		}
-	}
 }
 
 
@@ -792,7 +834,6 @@
 		.section_content{
 			.chart{
 				.chart_info{
-					padding-right: 80px;
 					.percent{
 						width: 100px;
 						height: 100px;
@@ -819,12 +860,6 @@
 			}
 		}
 	}
-
-	.portfolio{
-		.section_content{
-		}	
-	}
-
 
 	.contact_me{
 		.section_content{
@@ -906,7 +941,6 @@
 			}
 			.chart{
 				.chart_info{
-					padding-right: 60px;
 					.percent{
 						width: 85px;
 						height: 85px;
@@ -937,22 +971,6 @@
 		}
 	}
 
-	.skill{
-		padding-bottom: 170px;
-		.section_content{
-			.chart{
-				.chart_info{
-					padding-right: 50px;
-				}
-			}
-		}
-	}
-
-	.portfolio{
-		.section_content{
-
-		}	
-	}
 
 	.about,.skill,.education,.portfolio{
 		.section_content{
@@ -989,16 +1007,6 @@
 		.navbar_header{
 			.header_logo{
 				left: 25%;
-			}
-		}
-	}
-
-	.skill{
-		.section_content{
-			.chart{
-				.chart_info{
-					padding-right: 20px;
-				}
 			}
 		}
 	}
@@ -1069,7 +1077,6 @@
 		.section_content{
 			.chart{
 				.chart_info{
-					padding-right: 15px;
 					.percent{
 						width: 80px;
 						height: 80px;
@@ -1097,11 +1104,6 @@
 		}	
 	}
 
-	.portfolio{
-		.section_content{
-
-		}	
-	}
 
 	.about,.skill,.education,.portfolio,.contact_me{
 		.section_content{

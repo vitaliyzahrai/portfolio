@@ -60,6 +60,8 @@
 }
 .header_menu .header_menu_nav .header_menu_ul .menu_item:hover {
   margin-left: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .header_menu .header_menu_nav .header_menu_ul .menu_item:nth-child(1) {
   background-color: #f36f03;
@@ -125,15 +127,15 @@
 
 .home_banner_one {
   position: relative;
-  height: 600px;
+  height: 700px;
   background: #eaeaea;
 }
 .home_banner_one .banner_content {
   background: url("image/bg_image.jpg");
   width: 70%;
-  height: 600px;
+  height: 700px;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
 }
 .home_banner_one .banner_content .banner_info {
   position: absolute;
@@ -156,7 +158,7 @@
   line-height: 90px;
 }
 .home_banner_one .banner_content .banner_info h2 span {
-  margin: 10px;
+  margin: 15px;
 }
 .home_banner_one .banner_content .banner_info h3 {
   margin: 10px 0;
@@ -169,7 +171,7 @@
 
 .about {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 150px;
 }
 .about .section_content .about_info {
@@ -243,8 +245,8 @@
 .skill {
   width: 100%;
   background: #eaeaea;
-  padding-top: 50px;
-  padding-bottom: 220px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .skill .section_content .progress_content {
   display: grid;
@@ -315,14 +317,17 @@
 .skill .section_content .progress_content .skills .skills_bar .skills_per6 {
   background-color: #ed1c24;
 }
+.skill .section_content .chart {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 20px;
+}
 .skill .section_content .chart .chart_info {
   list-style: none;
-  float: left;
-  padding-right: 80px;
   padding-top: 10px;
+  text-align: center;
 }
 .skill .section_content .chart .chart_info .percent {
-  text-align: center;
   display: inline-block;
   width: 110px;
   height: 110px;
@@ -352,8 +357,8 @@
 .education {
   width: 100%;
   background: #fff;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .education .section_content .education_info img {
   margin: 15px 0;
@@ -387,8 +392,8 @@
 .portfolio {
   width: 100%;
   background: #eaeaea;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .portfolio .section_content .portfolio_content {
   grid-template-columns: auto auto;
@@ -397,17 +402,56 @@
 }
 .portfolio .section_content .portfolio_content .portfolio_item {
   position: relative;
+  margin: 15px auto;
+}
+.portfolio .section_content .portfolio_content .portfolio_item:hover .portfolio_overlay {
+  opacity: 1;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 .portfolio .section_content .portfolio_content .portfolio_item img {
   width: 100%;
   height: auto;
-  margin: 15px auto;
+}
+.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  background-color: #fea700;
+}
+.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info a {
+  font-size: 30px;
+  color: #2d3038;
+}
+.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info h3 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #2d3038;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .contact_me {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .contact_me .section_content .adress ul {
   list-style: none;
@@ -441,6 +485,7 @@
   line-height: 20px;
 }
 .contact_me .section_content .adress ul li p {
+  height: 30px;
   margin-bottom: 5px;
   font-family: 'Montserrat', sans-serif;
   color: #2d3038;
@@ -451,6 +496,7 @@
   display: inline-block;
   margin-right: 10px;
   font-size: 18px;
+  border-bottom: none;
 }
 .contact_me .section_content .adress ul li .social li a {
   color: #000;
@@ -506,6 +552,11 @@
   text-align: justify;
 }
 
+.about .section_content address .mobile, .about .section_content .adress .mobile, .contact_me .section_content address .mobile, .contact_me .section_content .adress .mobile {
+  text-decoration: none;
+  color: #2d3038;
+}
+
 @media screen and (max-width: 1240px) {
   .header_menu .navbar_header .header_logo {
     left: 32%;
@@ -528,6 +579,9 @@
     left: 38%;
   }
 
+  .home_banner_one .banner_content .banner_info {
+    top: 53%;
+  }
   .home_banner_one .banner_content .banner_info h1 {
     font-size: 36px;
   }
@@ -561,10 +615,6 @@
 
   .about .section_content .achievement .achievement_info:not(:first-child) {
     margin-left: 10px;
-  }
-
-  .skill .section_content .chart .chart_info {
-    padding-right: 60px;
   }
 }
 @media screen and (max-width: 860px) {
@@ -678,9 +728,6 @@
     margin-left: 30px;
   }
 
-  .skill .section_content .chart .chart_info {
-    padding-right: 80px;
-  }
   .skill .section_content .chart .chart_info .percent {
     width: 100px;
     height: 100px;
@@ -746,9 +793,6 @@
   .skill .section_content .progress_content {
     display: block;
   }
-  .skill .section_content .chart .chart_info {
-    padding-right: 60px;
-  }
   .skill .section_content .chart .chart_info .percent {
     width: 85px;
     height: 85px;
@@ -768,13 +812,6 @@
     left: 20%;
   }
 
-  .skill {
-    padding-bottom: 170px;
-  }
-  .skill .section_content .chart .chart_info {
-    padding-right: 50px;
-  }
-
   .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1 {
     font-size: 46px;
   }
@@ -789,10 +826,6 @@
 @media screen and (max-width: 500px) {
   .header_menu .navbar_header .header_logo {
     left: 25%;
-  }
-
-  .skill .section_content .chart .chart_info {
-    padding-right: 20px;
   }
 
   .portfolio .section_content .portfolio_content {
@@ -832,9 +865,6 @@
     letter-spacing: 12px;
   }
 
-  .skill .section_content .chart .chart_info {
-    padding-right: 15px;
-  }
   .skill .section_content .chart .chart_info .percent {
     width: 80px;
     height: 80px;

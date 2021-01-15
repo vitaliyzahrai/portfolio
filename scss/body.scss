@@ -433,14 +433,11 @@
 				.portfolio_overlay{
 				  position: absolute;
 				  top: 0;
-				  bottom: 0;
-				  left: 0;
-				  right: 0;
 				  height: 100%;
 				  width: 100%;
 				  opacity: 0;
 				  transition: .3s ease;
-			    background-color: #fea700;
+			    background-color: #007bff;
 				  .portfolio_info{
 					  position: absolute;
 					  top: 50%;
@@ -448,17 +445,48 @@
 					  width: 80%;
 					  transform: translate(-50%, -50%);
 					  text-align: center;
-				  	a{
-				  		font-size: 30px;
-				  		color: #2d3038;
-				  	}
 				  	h3{
 				  		text-transform: uppercase;
 				  		font-family: 'Montserrat', sans-serif;
 				  		font-size: 22px;
 				  		color: #2d3038;
 					    margin-top: 5px;
-					    margin-bottom: 0;
+					    margin-bottom: 10px;
+				  	}
+				  	.portfolio_buttom{
+				  		padding: 10px 20px;
+				  		border-radius: 40px;
+			  		  text-align: center;
+						  display: inline-block;
+						  margin: 4px 2px;
+						  transition-duration: 0.8s;
+						  cursor: pointer;
+						  background-color: #007bff;
+						  border: 2px solid #ed1c24;
+				  		&:hover {
+							  background-color: #ed1c24;
+							}
+					  	a{
+					  		font-size: 20px;
+					  		color: #2d3038;
+						  	text-decoration: none;
+						  	i{
+						  		color: #ed1c24;
+							  	&:hover {
+							  		color: #fff;
+									}
+						  	}
+							  span{
+						  		padding-left: 10px;
+								  text-decoration: none;
+							  	color: #ed1c24;
+							  	font-family: 'Montserrat', sans-serif;
+					  			font-size: 18px;
+					  			&:hover {
+							  		color: #fff;
+									}
+						  	}
+					  	}
 				  	}
 				  }
 				}

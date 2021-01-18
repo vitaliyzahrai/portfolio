@@ -319,7 +319,7 @@
 }
 .skill .section_content .chart {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   grid-column-gap: 20px;
 }
 .skill .section_content .chart .chart_info {
@@ -453,21 +453,14 @@
   border: 2px solid #ed1c24;
 }
 .portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom:hover {
-  background-color: #ed1c24;
+  background-color: #2d3038;
 }
 .portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom a {
   font-size: 20px;
   color: #2d3038;
   text-decoration: none;
 }
-.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom a i {
-  color: #ed1c24;
-}
-.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom a i:hover {
-  color: #fff;
-}
 .portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom a span {
-  padding-left: 10px;
   text-decoration: none;
   color: #ed1c24;
   font-family: 'Montserrat', sans-serif;
@@ -529,6 +522,26 @@
 }
 .contact_me .section_content .adress ul li .social li a {
   color: #000;
+}
+.contact_me .section_content .adress ul li .social li a i:hover {
+  color: #f0c30f;
+}
+.contact_me .section_content .text_contact {
+  padding: 20px 20px;
+}
+.contact_me .section_content .text_contact .icon {
+  float: left;
+  font-size: 40px;
+  margin: 15px 30px 0 0;
+  color: #87c05e;
+}
+.contact_me .section_content .text_contact h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3038;
 }
 
 .footer {
@@ -776,6 +789,9 @@
 
   .contact_me .section_content .adress ul li {
     padding: 15px;
+  }
+  .contact_me .section_content .text_contact {
+    padding: 0 15px;
   }
 
   .about .section_content, .skill .section_content, .education .section_content, .portfolio .section_content, .contact_me .section_content {

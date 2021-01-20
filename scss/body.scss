@@ -191,18 +191,18 @@
 				font-weight: 400;
 				text-align: justify;
 			}
-			.signature{
-				padding-top: 20px;
-				color: #2d3038;
-				font-family: 'Monoton', cursive;
-				font-size: 35px;
-				text-decoration: none;
-				span:nth-child(1){
-					padding: 0 5px;
-					color: #f0c30f;
-					border: 2px solid #f0c30f; 
-				}	
-			}
+			// .signature{
+			// 	padding-top: 20px;
+			// 	color: #2d3038;
+			// 	font-family: 'Monoton', cursive;
+			// 	font-size: 35px;
+			// 	text-decoration: none;
+			// 	span:nth-child(1){
+			// 		padding: 0 5px;
+			// 		color: #f0c30f;
+			// 		border: 2px solid #f0c30f; 
+			// 	}	
+			// }
 		}
 		address{
 			line-height: 35px;
@@ -584,7 +584,6 @@
 		    	position: relative;
 		    	width: 100%;
 		    	display: grid;
-		    	// grid-template-columns: repeat ( auto-fit, minmax(300px,1fr));
 			    .form_group,.textarea{
 			    	position: relative;
 			    	width: 100%;
@@ -657,16 +656,32 @@
 			    			}
 		    			}
 		    		}
-		    		input{
+		    		.button{
 		    			float: right;
-		    			border: none;
-		    			padding: 10px 35px;
 		    			cursor: pointer;
-		    			font-family: 'Montserrat', sans-serif;
-		    			font-size: 20px;
 		    			color: #fff;
-		    			background: #5d2904;
+		    			border: 1px solid #5d2904;
 		    			border-radius: 2px;
+		    			background: linear-gradient(to right, #fff 50%, #5d2904 50%);
+						  background-size: 200% 100%;
+						  background-position: right bottom;
+						  transition: all .5s ease-out;
+						  &:hover {
+							  background-position: left bottom;
+							}
+							.btn_fg{
+								padding: 12px 35px;
+								font-family: 'Montserrat', sans-serif;
+		    				font-size: 20px;
+		    				font-weight: 400;
+		    				text-decoration: none;
+							  color: #fff;
+							  transition: all .6s ease-out;
+							  display: block;
+								&:hover {
+								  color: #2d3038;  
+								}
+							}
 		    		}
 			    }
 		    }
@@ -680,6 +695,45 @@
 	}
 }
 
+// my_resyme
+
+.my_resyme{
+	width: 100%;
+  padding-top: 10px;
+  padding-bottom: 70px;
+	.section_content{
+		.button{
+			float: left;
+			margin-top: 40px;
+		  border: 1px solid #5d2904;
+		  border-radius: 3px;
+			color: #fff;
+		  display: block;
+		  background: linear-gradient(to right, #fff 50%, #5d2904 50%);
+		  background-size: 200% 100%;
+		  background-position: right bottom;
+		  transition: all .5s ease-out;
+		  &:hover {
+			  background-position: left bottom;
+			}
+			.btn_mr{
+				padding: 15px 40px;
+			  text-align: center;
+			  font-family: 'Montserrat', sans-serif;
+			  font-size: 20px;
+			  text-decoration: none;
+			  color: #fff;
+			  transition: all .6s ease-out;
+			  display: block;
+				&:hover {
+				  color: #2d3038;  
+				}
+			}
+		}
+	}
+}
+
+
 // footer section
 
 .footer{
@@ -687,6 +741,7 @@
 	width: 100%;
 	height: 90px;
 	position: relative;
+	margin-top: 70px;
 	span{
 		position: absolute;
     top: 40%;
@@ -700,7 +755,7 @@
 }
 
 
-.about,.skill,.education,.portfolio,.contact_me{
+.about,.skill,.education,.portfolio,.contact_me,.my_resyme{
 	.section_content{
 		position: relative;
 		left: 5%;
@@ -738,6 +793,25 @@
 		}
 	}
 }
+
+.about,.my_resyme{
+	.section_content{
+		.about_info{
+			.signature{
+				padding-top: 20px;
+				color: #2d3038;
+				font-family: 'Monoton', cursive;
+				font-size: 35px;
+				text-decoration: none;
+				span:nth-child(1){
+					padding: 0 5px;
+					color: #f0c30f;
+					border: 2px solid #f0c30f; 
+				}	
+			}
+		}
+	}
+}		
 
 .about,.contact_me{
 	.section_content{
@@ -1031,7 +1105,7 @@
 		}
 	}
 
-	.about,.skill,.education,.portfolio,.contact_me{
+	.about,.skill,.education,.portfolio,.contact_me,.my_resyme{
 		.section_content{
 			width: 90%;
 			.section_title{
@@ -1160,12 +1234,37 @@
 					line-height: 40px;
 				}
 				.contact_container{
+					.contact_form{
+						.form_group{
+							.button{
+								.btn_fg{
+									font-size: 16px;
+								}
+							}
+						}
+					}
 					.contact_form_first{
 						grid-template-columns: auto;
 					}
 				}
 			}
 		}
+	}
+
+	.my_resyme{
+		.section_content{
+			.button{
+				float: none;
+				.btn_mr{
+				  font-size: 16px;
+				  padding: 15px 35px;
+				}
+			}
+		}
+	}
+
+	.footer{
+		margin-top: 0;
 	}
 
 	.about,.skill,.education,.portfolio{
@@ -1222,6 +1321,30 @@
 				padding-left: 10px;
 				h4{
 					font-size: 18px;
+				}
+				.contact_container{
+					.contact_form{
+						.form_group{
+							.button{
+								.btn_fg{
+									font-size: 14px;
+									padding: 10px 30px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.my_resyme{
+		.section_content{
+			.button{
+				float: none;
+				.btn_mr{
+				  font-size: 14px;
+				  padding: 12px 30px;
 				}
 			}
 		}
@@ -1288,6 +1411,23 @@
 		}	
 	}
 
+	.my_resyme{
+		.section_content{
+			.button{
+				float: none;
+				.btn_mr{
+				  font-size: 13px;
+				  padding: 10px 25px;
+				}
+			}
+		}
+	}
+
+	.footer{
+		span{
+			font-size: 12px;
+		}	
+	}
 
 	.about,.skill,.education,.portfolio,.contact_me{
 		.section_content{
@@ -1302,11 +1442,8 @@
 		}	
 	}
 
-	.footer{
-		span{
-			font-size: 12px;
-		}	
-	}
-
 }
 
+@media screen and (max-width: 360px){
+
+}

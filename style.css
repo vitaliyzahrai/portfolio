@@ -553,7 +553,7 @@
 }
 .contact_me .section_content .text_contact .contact_container {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 28px;
   font-weight: 700;
@@ -566,7 +566,6 @@
 .contact_me .section_content .text_contact .contact_container .contact_form .form_group, .contact_me .section_content .text_contact .contact_container .contact_form .textarea {
   position: relative;
   width: 100%;
-  padding: 0 10px;
   margin: 30px 0 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;

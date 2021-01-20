@@ -183,18 +183,6 @@
   font-weight: 400;
   text-align: justify;
 }
-.about .section_content .about_info .signature {
-  padding-top: 20px;
-  color: #2d3038;
-  font-family: 'Monoton', cursive;
-  font-size: 35px;
-  text-decoration: none;
-}
-.about .section_content .about_info .signature span:nth-child(1) {
-  padding: 0 5px;
-  color: #f0c30f;
-  border: 2px solid #f0c30f;
-}
 .about .section_content address {
   line-height: 35px;
   font-family: 'Montserrat', sans-serif;
@@ -636,16 +624,35 @@
 .contact_me .section_content .text_contact .contact_container .contact_form .form_group .textarea textarea:focus ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .textarea textarea:valid ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .textarea textarea:focus ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .textarea textarea:valid ~ .line {
   height: 100%;
 }
-.contact_me .section_content .text_contact .contact_container .contact_form .form_group input, .contact_me .section_content .text_contact .contact_container .contact_form .textarea input {
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .button, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .button {
   float: right;
-  border: none;
-  padding: 10px 35px;
   cursor: pointer;
+  color: #fff;
+  border: 1px solid #5d2904;
+  border-radius: 2px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(50%, #5d2904));
+  background: linear-gradient(to right, #fff 50%, #5d2904 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .button:hover, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .button:hover {
+  background-position: left bottom;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .button .btn_fg, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .button .btn_fg {
+  padding: 12px 35px;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
   color: #fff;
-  background: #5d2904;
-  border-radius: 2px;
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+  display: block;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .button .btn_fg:hover, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .button .btn_fg:hover {
+  color: #2d3038;
 }
 .contact_me .section_content .text_contact .contact_container .contact_form_first {
   grid-template-columns: auto auto;
@@ -653,11 +660,49 @@
   display: grid;
 }
 
+.my_resyme {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 70px;
+}
+.my_resyme .section_content .button {
+  float: left;
+  margin-top: 40px;
+  border: 1px solid #5d2904;
+  border-radius: 3px;
+  color: #fff;
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(50%, #5d2904));
+  background: linear-gradient(to right, #fff 50%, #5d2904 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+.my_resyme .section_content .button:hover {
+  background-position: left bottom;
+}
+.my_resyme .section_content .button .btn_mr {
+  padding: 15px 40px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+  display: block;
+}
+.my_resyme .section_content .button .btn_mr:hover {
+  color: #2d3038;
+}
+
 .footer {
   background-color: #261710;
   width: 100%;
   height: 90px;
   position: relative;
+  margin-top: 70px;
 }
 .footer span {
   position: absolute;
@@ -670,25 +715,25 @@
   text-align: left;
 }
 
-.about .section_content, .skill .section_content, .education .section_content, .portfolio .section_content, .contact_me .section_content {
+.about .section_content, .skill .section_content, .education .section_content, .portfolio .section_content, .contact_me .section_content, .my_resyme .section_content {
   position: relative;
   left: 5%;
   width: 60%;
 }
-.about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1, .contact_me .section_content .section_title h1 {
+.about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1, .contact_me .section_content .section_title h1, .my_resyme .section_content .section_title h1 {
   margin-top: 20px;
   font-size: 56px;
   font-family: 'Aclonica', sans-serif;
   color: #2d3038;
 }
-.about .section_content .section_title h4, .skill .section_content .section_title h4, .education .section_content .section_title h4, .portfolio .section_content .section_title h4, .contact_me .section_content .section_title h4 {
+.about .section_content .section_title h4, .skill .section_content .section_title h4, .education .section_content .section_title h4, .portfolio .section_content .section_title h4, .contact_me .section_content .section_title h4, .my_resyme .section_content .section_title h4 {
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   color: #2d3038;
   font-weight: 700;
   letter-spacing: 8px;
 }
-.about .section_content .text_info h4, .skill .section_content .text_info h4, .education .section_content .text_info h4, .portfolio .section_content .text_info h4, .contact_me .section_content .text_info h4 {
+.about .section_content .text_info h4, .skill .section_content .text_info h4, .education .section_content .text_info h4, .portfolio .section_content .text_info h4, .contact_me .section_content .text_info h4, .my_resyme .section_content .text_info h4 {
   margin-top: 20px;
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -696,11 +741,24 @@
   font-weight: 700;
   color: #2d3038;
 }
-.about .section_content .text_info p, .skill .section_content .text_info p, .education .section_content .text_info p, .portfolio .section_content .text_info p, .contact_me .section_content .text_info p {
+.about .section_content .text_info p, .skill .section_content .text_info p, .education .section_content .text_info p, .portfolio .section_content .text_info p, .contact_me .section_content .text_info p, .my_resyme .section_content .text_info p {
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 20px;
   color: #2d3038;
   text-align: justify;
+}
+
+.about .section_content .about_info .signature, .my_resyme .section_content .about_info .signature {
+  padding-top: 20px;
+  color: #2d3038;
+  font-family: 'Monoton', cursive;
+  font-size: 35px;
+  text-decoration: none;
+}
+.about .section_content .about_info .signature span:nth-child(1), .my_resyme .section_content .about_info .signature span:nth-child(1) {
+  padding: 0 5px;
+  color: #f0c30f;
+  border: 2px solid #f0c30f;
 }
 
 .about .section_content address .mobile, .about .section_content .adress .mobile, .contact_me .section_content address .mobile, .contact_me .section_content .adress .mobile {
@@ -907,16 +965,16 @@
     margin-top: 0;
   }
 
-  .about .section_content, .skill .section_content, .education .section_content, .portfolio .section_content, .contact_me .section_content {
+  .about .section_content, .skill .section_content, .education .section_content, .portfolio .section_content, .contact_me .section_content, .my_resyme .section_content {
     width: 90%;
   }
-  .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1, .contact_me .section_content .section_title h1 {
+  .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1, .contact_me .section_content .section_title h1, .my_resyme .section_content .section_title h1 {
     font-size: 50px;
   }
-  .about .section_content .section_title h4, .skill .section_content .section_title h4, .education .section_content .section_title h4, .portfolio .section_content .section_title h4, .contact_me .section_content .section_title h4 {
+  .about .section_content .section_title h4, .skill .section_content .section_title h4, .education .section_content .section_title h4, .portfolio .section_content .section_title h4, .contact_me .section_content .section_title h4, .my_resyme .section_content .section_title h4 {
     font-size: 12px;
   }
-  .about .section_content .text_info h4, .skill .section_content .text_info h4, .education .section_content .text_info h4, .portfolio .section_content .text_info h4, .contact_me .section_content .text_info h4 {
+  .about .section_content .text_info h4, .skill .section_content .text_info h4, .education .section_content .text_info h4, .portfolio .section_content .text_info h4, .contact_me .section_content .text_info h4, .my_resyme .section_content .text_info h4 {
     font-size: 22px;
   }
 }
@@ -987,8 +1045,23 @@
     font-size: 22px;
     line-height: 40px;
   }
+  .contact_me .section_content .text_contact .contact_container .contact_form .form_group .button .btn_fg {
+    font-size: 16px;
+  }
   .contact_me .section_content .text_contact .contact_container .contact_form_first {
     grid-template-columns: auto;
+  }
+
+  .my_resyme .section_content .button {
+    float: none;
+  }
+  .my_resyme .section_content .button .btn_mr {
+    font-size: 16px;
+    padding: 15px 35px;
+  }
+
+  .footer {
+    margin-top: 0;
   }
 
   .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1 {
@@ -1021,6 +1094,18 @@
   }
   .contact_me .section_content .text_contact h4 {
     font-size: 18px;
+  }
+  .contact_me .section_content .text_contact .contact_container .contact_form .form_group .button .btn_fg {
+    font-size: 14px;
+    padding: 10px 30px;
+  }
+
+  .my_resyme .section_content .button {
+    float: none;
+  }
+  .my_resyme .section_content .button .btn_mr {
+    font-size: 14px;
+    padding: 12px 30px;
   }
 }
 @media screen and (max-width: 425px) {
@@ -1057,14 +1142,22 @@
     font-size: 16px;
   }
 
+  .my_resyme .section_content .button {
+    float: none;
+  }
+  .my_resyme .section_content .button .btn_mr {
+    font-size: 13px;
+    padding: 10px 25px;
+  }
+
+  .footer span {
+    font-size: 12px;
+  }
+
   .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1, .contact_me .section_content .section_title h1 {
     font-size: 36px;
   }
   .about .section_content .section_title h4, .skill .section_content .section_title h4, .education .section_content .section_title h4, .portfolio .section_content .section_title h4, .contact_me .section_content .section_title h4 {
     font-size: 10px;
-  }
-
-  .footer span {
-    font-size: 12px;
   }
 }

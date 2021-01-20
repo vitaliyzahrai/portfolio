@@ -360,12 +360,17 @@
   padding-top: 70px;
   padding-bottom: 70px;
 }
+.education .section_content .education_info {
+  height: 192px;
+}
 .education .section_content .education_info img {
-  margin: 15px 0;
+  float: left;
+  margin: 15px 10px 15px 0;
   max-width: 100%;
   height: auto;
 }
 .education .section_content .education_info h3 {
+  margin-top: 15px;
   font-family: 'Montserrat', sans-serif;
   color: #2d3038;
   font-weight: 700;
@@ -384,6 +389,9 @@
   font-family: 'Montserrat', sans-serif;
   color: #2d3038;
   font-size: 22px;
+}
+.education .section_content .educin_1 {
+  height: 140px;
 }
 .education .section_content hr {
   color: #2d3038;
@@ -529,10 +537,10 @@
 .contact_me .section_content .text_contact {
   padding: 20px 20px;
 }
-.contact_me .section_content .text_contact .icon {
+.contact_me .section_content .text_contact .icon_contact {
   float: left;
   font-size: 40px;
-  margin: 15px 30px 0 0;
+  margin: 15px 25px 0 0;
   color: #87c05e;
 }
 .contact_me .section_content .text_contact h4 {
@@ -542,6 +550,108 @@
   font-size: 28px;
   font-weight: 700;
   color: #2d3038;
+}
+.contact_me .section_content .text_contact .contact_container {
+  width: 100%;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form {
+  position: relative;
+  width: 100%;
+  display: grid;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group, .contact_me .section_content .text_contact .contact_container .contact_form .textarea {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #5d2904;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box input, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box textarea, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box input, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #fff;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box input:focus + .text, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box input:valid + .text, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box textarea:focus + .text, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box textarea:valid + .text, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box input:focus + .text, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box input:valid + .text, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box textarea:focus + .text, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box input:focus ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box input:valid ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box textarea:focus ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box textarea:valid ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box input:focus ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box input:valid ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box textarea:focus ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box textarea:valid ~ .line {
+  height: 100%;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box .text, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .form_box .line, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .form_box .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #5d2904;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 2px;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .textarea, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .textarea textarea, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .textarea textarea {
+  height: 100%;
+  resize: none;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .textarea textarea:focus + .text, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .textarea textarea:valid + .text, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .textarea textarea:focus + .text, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .textarea textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group .textarea textarea:focus ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .form_group .textarea textarea:valid ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .textarea textarea:focus ~ .line, .contact_me .section_content .text_contact .contact_container .contact_form .textarea .textarea textarea:valid ~ .line {
+  height: 100%;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form .form_group input, .contact_me .section_content .text_contact .contact_container .contact_form .textarea input {
+  float: right;
+  border: none;
+  padding: 10px 35px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  background: #5d2904;
+  border-radius: 2px;
+}
+.contact_me .section_content .text_contact .contact_container .contact_form_first {
+  grid-template-columns: auto auto;
+  grid-column-gap: 20px;
+  display: grid;
 }
 
 .footer {
@@ -608,7 +718,7 @@
     font-size: 42px;
   }
   .home_banner_one .banner_content .banner_info h2 {
-    font-size: 90px;
+    font-size: 88px;
     line-height: 80px;
   }
   .home_banner_one .banner_content .banner_info h3 {
@@ -761,6 +871,7 @@
     width: 100%;
   }
   .home_banner_one .banner_content .banner_info {
+    left: 5%;
     width: 85%;
     top: 100%;
     margin-top: -200px;
@@ -792,6 +903,9 @@
   }
   .contact_me .section_content .text_contact {
     padding: 0 15px;
+  }
+  .contact_me .section_content .text_contact .icon_contact {
+    margin-top: 0;
   }
 
   .about .section_content, .skill .section_content, .education .section_content, .portfolio .section_content, .contact_me .section_content {
@@ -857,8 +971,11 @@
     left: 20%;
   }
 
-  .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1 {
-    font-size: 46px;
+  .education .section_content .education_info {
+    height: auto;
+  }
+  .education .section_content .education_info img {
+    float: none;
   }
 
   .contact_me .section_content .adress ul li h3 {
@@ -866,6 +983,17 @@
   }
   .contact_me .section_content .adress ul li p {
     font-size: 14px;
+  }
+  .contact_me .section_content .text_contact h4 {
+    font-size: 22px;
+    line-height: 40px;
+  }
+  .contact_me .section_content .text_contact .contact_container .contact_form_first {
+    grid-template-columns: auto;
+  }
+
+  .about .section_content .section_title h1, .skill .section_content .section_title h1, .education .section_content .section_title h1, .portfolio .section_content .section_title h1 {
+    font-size: 46px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -889,15 +1017,18 @@
   .contact_me .section_content .adress ul li .social li {
     font-size: 12px;
   }
+  .contact_me .section_content .text_contact {
+    padding-left: 10px;
+  }
+  .contact_me .section_content .text_contact h4 {
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 425px) {
   .header_menu .navbar_header .header_logo {
     left: 32%;
   }
 
-  .home_banner_one .banner_content .banner_info {
-    left: 5%;
-  }
   .home_banner_one .banner_content .banner_info h1 {
     font-size: 25px;
   }

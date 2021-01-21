@@ -191,18 +191,6 @@
 				font-weight: 400;
 				text-align: justify;
 			}
-			// .signature{
-			// 	padding-top: 20px;
-			// 	color: #2d3038;
-			// 	font-family: 'Monoton', cursive;
-			// 	font-size: 35px;
-			// 	text-decoration: none;
-			// 	span:nth-child(1){
-			// 		padding: 0 5px;
-			// 		color: #f0c30f;
-			// 		border: 2px solid #f0c30f; 
-			// 	}	
-			// }
 		}
 		address{
 			line-height: 35px;
@@ -429,21 +417,22 @@
 				position: relative;
 				margin: 15px auto;
 				&:hover .portfolio_overlay {
-	    		opacity: 1;
-	    		transition: all 0.5s linear;
+	    		display: block;
+	    		transform: translateX(0%);
 				}
 				img{
 					width: 100%;
 			    height: auto;
 				}
 				.portfolio_overlay{
+					display: none;
 				  position: absolute;
 				  top: 0;
 				  height: 100%;
 				  width: 100%;
-				  opacity: 0;
-				  transition: .3s ease;
-			    background-color: #007bff;
+					transform: translateX(100%);
+					// transition: all 0.7s linear;
+			    background-color: #eaeaea;
 				  .portfolio_info{
 					  position: absolute;
 					  top: 50%;
@@ -453,40 +442,42 @@
 					  text-align: center;
 				  	h3{
 				  		text-transform: uppercase;
-				  		font-family: 'Montserrat', sans-serif;
+				  		font-family: 'Aclonica', sans-serif;
 				  		font-size: 22px;
 				  		color: #2d3038;
 					    margin-top: 5px;
 					    margin-bottom: 10px;
+					    height: 50px;
 				  	}
-				  	.portfolio_buttom{
-				  		padding: 10px 20px;
-				  		border-radius: 40px;
-			  		  text-align: center;
-						  display: inline-block;
-						  margin: 4px 2px;
-						  transition-duration: 0.8s;
-						  cursor: pointer;
-						  background-color: #007bff;
-						  border: 2px solid #ed1c24;
-				  		&:hover {
-							  background-color: #2d3038;
+				  	.button{
+				  		width: 120px;
+    					margin: 0 auto;
+		    			text-align: center;
+		    			cursor: pointer;
+		    			color: #fff;
+		    			border: 1px solid #5d2904;
+		    			border-radius: 2px;
+		    			background: linear-gradient(to right, #fff 50%, #5d2904 50%);
+						  background-size: 200% 100%;
+						  background-position: right bottom;
+						  transition: all .5s ease-out;
+						  &:hover {
+							  background-position: left bottom;
 							}
-					  	a{
-					  		font-size: 20px;
-					  		color: #2d3038;
-						  	text-decoration: none;
-							  span{
-								  text-decoration: none;
-							  	color: #ed1c24;
-							  	font-family: 'Montserrat', sans-serif;
-					  			font-size: 18px;
-					  			&:hover {
-							  		color: #fff;
-									}
-						  	}
-					  	}
-				  	}
+							.btn_pb{
+								padding: 10px 10px;
+								font-family: 'Montserrat', sans-serif;
+		    				font-size: 20px;
+		    				font-weight: 400;
+		    				text-decoration: none;
+							  color: #fff;
+							  transition: all .6s ease-out;
+							  display: block;
+								&:hover {
+								  color: #2d3038;  
+								}
+							}
+		    		}
 				  }
 				}
 			}
@@ -579,7 +570,6 @@
 	    	padding: 10px;
 	    	font-family: 'Montserrat', sans-serif;
 	    	font-size: 28px;
-	    	font-weight: 700;
 		    .contact_form{
 		    	position: relative;
 		    	width: 100%;
@@ -587,7 +577,7 @@
 			    .form_group,.textarea{
 			    	position: relative;
 			    	width: 100%;
-			    	margin: 30px 0 10px;
+			    	margin: 25px 0 10px;
 			    	transition: 0.5s;
 			    	.form_box{
 			    		position: relative;
@@ -699,8 +689,9 @@
 
 .my_resyme{
 	width: 100%;
+	background: #eaeaea;
   padding-top: 10px;
-  padding-bottom: 70px;
+  padding-bottom: 150px;
 	.section_content{
 		.button{
 			float: left;
@@ -741,7 +732,6 @@
 	width: 100%;
 	height: 90px;
 	position: relative;
-	margin-top: 70px;
 	span{
 		position: absolute;
     top: 40%;
@@ -906,6 +896,7 @@
 	.home_banner_one{
 		.banner_content{
 			.banner_info{
+				left: 8%;
 				top: 60%;
 				h1{
 					font-size: 32px;
@@ -1252,6 +1243,7 @@
 	}
 
 	.my_resyme{
+		padding-bottom: 70px;
 		.section_content{
 			.button{
 				float: none;

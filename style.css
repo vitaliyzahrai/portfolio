@@ -401,23 +401,23 @@
   margin: 15px auto;
 }
 .portfolio .section_content .portfolio_content .portfolio_item:hover .portfolio_overlay {
-  opacity: 1;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  display: block;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 .portfolio .section_content .portfolio_content .portfolio_item img {
   width: 100%;
   height: auto;
 }
 .portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay {
+  display: none;
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  background-color: #007bff;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  background-color: #eaeaea;
 }
 .portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info {
   position: absolute;
@@ -430,40 +430,44 @@
 }
 .portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info h3 {
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Aclonica', sans-serif;
   font-size: 22px;
   color: #2d3038;
   margin-top: 5px;
   margin-bottom: 10px;
+  height: 50px;
 }
-.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom {
-  padding: 10px 20px;
-  border-radius: 40px;
+.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .button {
+  width: 120px;
+  margin: 0 auto;
   text-align: center;
-  display: inline-block;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.8s;
-          transition-duration: 0.8s;
   cursor: pointer;
-  background-color: #007bff;
-  border: 2px solid #ed1c24;
-}
-.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom:hover {
-  background-color: #2d3038;
-}
-.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom a {
-  font-size: 20px;
-  color: #2d3038;
-  text-decoration: none;
-}
-.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom a span {
-  text-decoration: none;
-  color: #ed1c24;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-}
-.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .portfolio_buttom a span:hover {
   color: #fff;
+  border: 1px solid #5d2904;
+  border-radius: 2px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(50%, #5d2904));
+  background: linear-gradient(to right, #fff 50%, #5d2904 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .button:hover {
+  background-position: left bottom;
+}
+.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .button .btn_pb {
+  padding: 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+  display: block;
+}
+.portfolio .section_content .portfolio_content .portfolio_item .portfolio_overlay .portfolio_info .button .btn_pb:hover {
+  color: #2d3038;
 }
 
 .contact_me {
@@ -544,7 +548,6 @@
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 28px;
-  font-weight: 700;
 }
 .contact_me .section_content .text_contact .contact_container .contact_form {
   position: relative;
@@ -554,7 +557,7 @@
 .contact_me .section_content .text_contact .contact_container .contact_form .form_group, .contact_me .section_content .text_contact .contact_container .contact_form .textarea {
   position: relative;
   width: 100%;
-  margin: 30px 0 10px;
+  margin: 25px 0 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -662,8 +665,9 @@
 
 .my_resyme {
   width: 100%;
+  background: #eaeaea;
   padding-top: 10px;
-  padding-bottom: 70px;
+  padding-bottom: 150px;
 }
 .my_resyme .section_content .button {
   float: left;
@@ -702,7 +706,6 @@
   width: 100%;
   height: 90px;
   position: relative;
-  margin-top: 70px;
 }
 .footer span {
   position: absolute;
@@ -809,6 +812,7 @@
 }
 @media screen and (max-width: 990px) {
   .home_banner_one .banner_content .banner_info {
+    left: 8%;
     top: 60%;
   }
   .home_banner_one .banner_content .banner_info h1 {
@@ -1052,6 +1056,9 @@
     grid-template-columns: auto;
   }
 
+  .my_resyme {
+    padding-bottom: 70px;
+  }
   .my_resyme .section_content .button {
     float: none;
   }

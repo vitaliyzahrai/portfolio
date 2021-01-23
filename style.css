@@ -115,7 +115,7 @@
   list-style: none;
 }
 .header_menu .header_menu_nav .header_menu_ul .social .list_inline_item a {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 .header_menu .header_menu_nav .header_menu_ul .social .list_inline_item a i {
   color: #fff;
@@ -792,6 +792,7 @@
   }
 
   .home_banner_one .banner_content .banner_info {
+    left: 8%;
     top: 53%;
   }
   .home_banner_one .banner_content .banner_info h1 {
@@ -812,7 +813,6 @@
 }
 @media screen and (max-width: 990px) {
   .home_banner_one .banner_content .banner_info {
-    left: 8%;
     top: 60%;
   }
   .home_banner_one .banner_content .banner_info h1 {

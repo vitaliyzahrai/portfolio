@@ -115,7 +115,7 @@
 					text-align: center;
 					list-style: none;
 					a{
-						padding: 0 10px;
+						padding: 0 15px;
 						i{
 							color: #fff;
 							font-size: 20px;
@@ -533,7 +533,7 @@
 						li{
 							padding: 5px;
 							display: inline-block;
-							margin-right: 10px;
+							margin-right: 15px;
 							font-size: 18px;
 							border-bottom: none;
 							a{
@@ -584,14 +584,15 @@
 			    		width: 100%;
 			    		height: 40px;
 			    		color: #5d2904;
-			    		input, textarea{
+			    		input,textarea{
 			    			position: absolute;
-			    			width: 100%;
+			    			width: 98%;
 			    			height: 100%;
 			    			background: transparent;
 			    			box-shadow: none;
 			    			border: none;
 			    			outline: none;
+			    			font-family: 'Montserrat', sans-serif;
 			    			font-size: 18px;
 			    			padding: 0 10px;
 			    			z-index: 1;
@@ -650,6 +651,11 @@
 		    			float: right;
 		    			cursor: pointer;
 		    			color: #fff;
+	    				padding: 12px 35px;
+							font-family: 'Montserrat', sans-serif;
+	    				font-size: 20px;
+	    				font-weight: 400;
+	    				text-decoration: none;
 		    			border: 1px solid #5d2904;
 		    			border-radius: 2px;
 		    			background: linear-gradient(to right, #fff 50%, #5d2904 50%);
@@ -658,19 +664,7 @@
 						  transition: all .5s ease-out;
 						  &:hover {
 							  background-position: left bottom;
-							}
-							.btn_fg{
-								padding: 12px 35px;
-								font-family: 'Montserrat', sans-serif;
-		    				font-size: 20px;
-		    				font-weight: 400;
-		    				text-decoration: none;
-							  color: #fff;
-							  transition: all .6s ease-out;
-							  display: block;
-								&:hover {
-								  color: #2d3038;  
-								}
+							  color: #2d3038;
 							}
 		    		}
 			    }

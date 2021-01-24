@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap&family=Monoton&family=Montserrat:wght@400;700&family=Aclonica&display=swap" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- <script type="library/jquery-validation/dist/jquery.validate.js"></script> -->
 </head>
 <body>
 	
@@ -287,23 +288,24 @@
 					</ul>
 				</li>
 			</ul>
-		</div>
+		</div> 
 		<div class="text_contact">
 			<div class="icon_contact"><i class="far fa-comment-dots"></i></div>
 			<h4>Leave me a message</h4>
-			<div class="contact_container">
+
+			<form id="contact-form" class="contact_container" action="">
 				<div class="contact_form contact_form_first">
 					<div class="form_group">
 						<div class="form_box">
-							<input type="text" name="" required="required">
-							<span class="text">First Name</span>
+							<input id="first_name" type="text" minlength="2" name="First Name" required="required">
+							<label class="text">First Name</label>
 							<span class="line"></span>
 						</div>
 					</div>
 					<div class="form_group">
 						<div class="form_box">
-							<input type="text" name="" required="required">
-							<span class="text">Last Name</span>
+							<input id="last_name" type="text" name="Last Name" required="required">
+							<label class="text">Last Name</label>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -311,8 +313,8 @@
 				<div class="contact_form">
 					<div class="form_group">
 						<div class="form_box">
-							<input type="text" name="" required="required">
-							<span class="text">Your email</span>
+							<input id="email" type="email" name="email" required="required">
+							<label class="text">Your email</label>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -320,20 +322,19 @@
 				<div class="contact_form">
 					<div class="form_group">
 						<div class="form_box textarea">
-							<textarea required="required"></textarea>
-							<span class="text">Your message...</span>
+							<textarea id="comment" required="required"></textarea>
+							<label class="text">Your message...</label>
 							<span class="line"></span>
 						</div>
 					</div>
 				</div>
 				<div class="contact_form">
 					<div class="form_group">
-						<div class="button">
-							<a href="#" class="btn_fg">Send</a>
-						</div>
-					</div>
+						<input class="button" type="submit" value="Submit"></input>
+					</div> 
 				</div>
-			</div>	
+			</form>	
+
 		</div>
 	</div>
 </section>
